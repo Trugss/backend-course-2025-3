@@ -26,8 +26,8 @@ if (!options.output && !options.display) {
 
 try {
 	const data = fs.readFileSync(options.input, 'utf8');
-	const cars = JSON.parse(data);
-	
+	const cars = data.trim().split(`\n`).map(line => JSON.parse(line));
+		
 	let filteredCars = cars;
 
 	if (options.mpg) {
