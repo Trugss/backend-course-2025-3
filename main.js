@@ -44,7 +44,7 @@ try {
 		console.log(result);
 	}
 	if (options.output) {
-		fs.writeFileSync(options.output, processingResult, 'utf8');
+		fs.writeFileSync(options.output, result, 'utf8');
 		console.log(`Результат було записано у файл ${options.output}`);
 	}
 } catch (err) {
